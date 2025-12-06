@@ -3,113 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta para Alexia</title> <link rel="stylesheet" href="style.css"> 
+    <title>Para mi niña hermosa</title>
     
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
             text-align: center;
         }
-        main {
+        .container {
             max-width: 600px;
             margin: 0 auto;
-            background: #fff;
+            background-color: white;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: left;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
-            color: #d9534f;
-            text-align: center;
+        h1 {
+            color: #d84343;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #444;
+            font-size: 1.8em;
+            margin-top: 0;
         }
         p {
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            text-align: left;
+            color: #333;
         }
-        #playSongButton {
-            background-color: #5cb85c;
-            color: white;
+        .highlight {
+            font-weight: bold;
+            color: #d84343;
+        }
+        /* Estilo del botón de reproducción */
+        #audioButton {
             padding: 10px 20px;
+            font-size: 18px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1em;
-            display: block;
-            width: 100%;
-            margin-top: 20px;
+            background-color: #f79397;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        #audioButton:hover {
+            background-color: #d84343;
+        }
+        /* OCULTA el elemento de audio estándar */
+        #miCancion {
+            display: none;
         }
     </style>
 </head>
 <body>
-   <div style="text-align: center; margin-bottom: 20px;">
-    <button onclick="playAudio()" id="audioButton" style="padding: 10px 20px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; background-color: #f79397; color: white;">
-        ▶️ Reproducir nuestra canción
-    </button>
 
-    <audio id="miCancion">
-        <source src="RECUERD-MARCA-MP.mp3" type="audio/mpeg">
+    <div class="container">
         
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-</div>
-
-    <header>
         <h1>Para mi niña hermosa</h1>
-    </header>
 
-    <main>
-        <h2>Hola mi niña,</h2> 
+        <div style="text-align: center; margin-bottom: 30px;">
+            <button onclick="playAudio()" id="audioButton">
+                ▶️ Reproducir nuestra canción
+            </button>
+            
+            <audio id="miCancion">
+                <source src="RECUERDA-MARCA-MP.mp3" type="audio/mpeg">
+                El audio no pudo cargarse en este navegador.
+            </audio>
+        </div>
+        <h2>Hola amor,</h2>
 
-        <p>Quiero decirte que cada día que paso contigo, hablando o jugando, me haces sentir super bien. Me encanta tu personalidad, aunque aún no hemos hecho llamada (espero y pronto lo hagamos), tu personalidad en los mensajes es grandiosa.</p>
-        
-        <p>Eres muy linda y tierna, me encanta cuando me dices "te quiero" o "que rico". Eres una persona super increíble y por eso me gustas mucho. Eres única en el mundo y la más hermosa de todas las niñas.</p>
-        
-        <p>Esta carta la hago para demostrarte cuánto te amo. Como pasan los días, hoy te amo más que ayer y mañana será igual. No habrá ningún día en el que deje de pensar en ti y no te deje de amar.</p>
-        
-        <p>Tú eres el amor de mi vida, <strong>Alexia</strong>, eres mi todo, y te estoy entregando mi corazón, ya que tú vales mucho la pena.</p>
-        
-        <p>Eres mi niña hermosa, preciosa, mi princesa, mi mundo.</p>
-        
-        <p>Esta es mi primera vez haciendo una página así, así que si ves fallas es porque aún no le sé mucho, pero anduve practicando para hacerte este detalle. Espero y te guste mucho, mi niña hermosa.</p>
-        
-        <p style="text-align: center; font-weight: bold; margin-top: 30px;">Te amo hoy y siempre</p>
+        <p>
+            Quiero decirte que cada día que paso contigo, hablando o jugando, me haces 
+            sentir super bien. Me encanta tu personalidad, aunque aún no hemos hecho 
+            llamada (espero y pronto lo hagamos), tu personalidad en los mensajes es 
+            grandiosa.
+        </p>
 
-        <button id="playSongButton">Reproducir Nuestra Canción</button>
-    </main>
-    
-    <script>
-        document.getElementById('playSongButton').addEventListener('click', function() {
-            var audio = document.getElementById('miAudio');
-            if (audio.paused) {
-                audio.play();
-                this.textContent = 'Pausar Canción';
-            } else {
-                audio.pause();
-                this.textContent = 'Reproducir Te la dedico';
-            }
-        });
-    </script>
+        <p>
+            Eres muy linda y tierna, me encanta cuando me dices "mi niño" o "amor". Eres una 
+            persona super increíble y por eso me gustas mucho. Eres única en el mundo y la 
+            más hermosa de todas las niñas.
+        </p>
+        
+        <p>
+            Esta carta la hago para demostrarte cuánto te amo. Como pasan los días, hoy te amo 
+            más que ayer y mañana será igual. No habrá ningún día en el que deje de pensar 
+            en ti y no te deje de amar.
+        </p>
+        
+        <p>
+            Sí, eres el amor de mi vida, <span class="highlight">Alexia</span>, eres mi
+            todo, y te estoy entregando mi corazón...
+        </p>
+        </div>
+
 <script>
     function playAudio() {
         var audio = document.getElementById("miCancion");
         var button = document.getElementById("audioButton");
 
         if (audio.paused) {
-            // Si está pausada, la reproduce
+            // Si está pausada, la reproduce y cambia el texto del botón
             audio.play();
-            // Cambia el texto del botón a "Pausar"
             button.innerHTML = "⏸ Pausar canción";
         } else {
-            // Si está reproduciéndose, la pausa
+            // Si está reproduciéndose, la pausa y cambia el texto del botón
             audio.pause();
-            // Cambia el texto del botón a "Reproducir"
             button.innerHTML = "▶️ Reproducir nuestra canción";
         }
+
+        // Vuelve a poner el texto "Reproducir" cuando la canción termina
+        audio.onended = function() {
+            button.innerHTML = "▶️ Reproducir nuestra canción";
+        };
     }
 </script>
 
