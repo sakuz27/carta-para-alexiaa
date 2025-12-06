@@ -46,13 +46,18 @@
     </style>
 </head>
 <body>
+   <div style="text-align: center; margin-bottom: 20px;">
+    <button onclick="playAudio()" id="audioButton" style="padding: 10px 20px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; background-color: #f79397; color: white;">
+        ▶️ Reproducir nuestra canción
+    </button>
 
-    <audio controls autoplay>
-  <source src="RECUERDA-MARCA-MP.mp3" type="audio/mpeg">
-</audio>
+    <audio id="miCancion">
+        <source src="RECUERD-MARCA-MP.mp3" type="audio/mpeg">
+        
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+</div>
 
-
-   
     <header>
         <h1>Para mi niña hermosa</h1>
     </header>
@@ -89,6 +94,24 @@
             }
         });
     </script>
+<script>
+    function playAudio() {
+        var audio = document.getElementById("miCancion");
+        var button = document.getElementById("audioButton");
+
+        if (audio.paused) {
+            // Si está pausada, la reproduce
+            audio.play();
+            // Cambia el texto del botón a "Pausar"
+            button.innerHTML = "⏸ Pausar canción";
+        } else {
+            // Si está reproduciéndose, la pausa
+            audio.pause();
+            // Cambia el texto del botón a "Reproducir"
+            button.innerHTML = "▶️ Reproducir nuestra canción";
+        }
+    }
+</script>
 
 </body>
 </html>
