@@ -3,113 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi niña hermosa</title>
+    <title>Carta para Alexia</title> <link rel="stylesheet" href="style.css"> 
+    
     <style>
-        /* ESTILOS DE LA PÁGINA (CSS) */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8eaf8;
-            color: #4c2a4c;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
-            line-height: 1.6;
-            transition: background-color 0.5s ease;
         }
-        .carta-container {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            max-width: 700px;
-            margin: 40px auto;
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
             padding: 30px;
-            border: 2px solid #e1bee7;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
         }
-        h1 {
-            color: #880e4f;
-            font-family: 'Georgia', serif;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        h1, h2 {
+            color: #d9534f;
+            text-align: center;
         }
         p {
-            font-size: 1.1em;
+            line-height: 1.6;
             margin-bottom: 20px;
         }
-        .saludo {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #880e4f;
-        }
-        .firma {
-            font-size: 1.2em;
-            margin-top: 30px;
-            font-style: italic;
-        }
-        .nota-final {
-            font-size: 0.9em;
-            color: #a0a0a0;
-            margin-top: 40px;
-        }
-        .musica-container {
-            margin-top: 20px;
-        }
-        #btnReproducir {
-            background-color: #e91e63;
+        #playSongButton {
+            background-color: #5cb85c;
             color: white;
-            border: none;
             padding: 10px 20px;
-            font-size: 1em;
+            border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        #btnReproducir:hover {
-            background-color: #c2185b;
+            font-size: 1em;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <audio id="miCancion" loop>
-        <source src="Recuerda-Marca-MP.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
+    <audio id="miAudio" src="nuestra_cancion.mp3" preload="auto" loop></audio> 
+    <p>Tu navegador no soporta el elemento de audio.</p>
 
-    <div class="carta-container">
+    <header>
         <h1>Para mi niña hermosa</h1>
-        <p class="saludo">Hola amor,</p>
-        <p>
-            Quiero decirte que cada día que paso contigo, hablando o jugando, me haces sentir super bien. Me encanta tu personalidad, aunque aún no hemos hecho llamada (espero y pronto lo hagamos), tu personalidad en los mensajes es grandiosa.
-        </p>
-        <p>
-            Eres muy linda y tierna, me encanta cuando me dices "mi niño" o "amor". Eres una persona super increíble y por eso me gustas mucho. Eres única en el mundo y la más hermosa de todas las niñas.
-        </p>
-        <p>
-            Esta carta la hago para demostrarte cuánto te amo. Como pasan los días, hoy te amo más que ayer y mañana será igual. No habrá ningún día en el que deje de pensar en ti y no te deje de amar.
-        </p>
-        <p>
-            Tú eres el amor de mi vida, Yessica, eres mi todo, y te estoy entregando mi corazón, ya que tú vales mucho la pena.
-        </p>
-        <p>
-            Eres mi niña hermosa, preciosa, mi princesa, mi mundo.
-        </p>
-        <p class="nota-final">
-            Esta es mi primera vez haciendo una página así, así que si ves fallas es porque aún no le sé mucho, pero anduve practicando para hacerte este detalle. Espero y te guste mucho, mi niña hermosa.
-        </p>
-        <p class="firma">Te amo hoy y siempre</p>
+    </header>
 
-        <div class="musica-container">
-            <button id="btnReproducir">Reproducir Nuestra Canción</button>
-        </div>
-    </div>
+    <main>
+        <h2>Hola amor,</h2> 
 
+        <p>Quiero decirte que cada día que paso contigo, hablando o jugando, me haces sentir super bien. Me encanta tu personalidad, aunque aún no hemos hecho llamada (espero y pronto lo hagamos), tu personalidad en los mensajes es grandiosa.</p>
+        
+        <p>Eres muy linda y tierna, me encanta cuando me dices "mi niño" o "amor". Eres una persona super increíble y por eso me gustas mucho. Eres única en el mundo y la más hermosa de todas las niñas.</p>
+        
+        <p>Esta carta la hago para demostrarte cuánto te amo. Como pasan los días, hoy te amo más que ayer y mañana será igual. No habrá ningún día en el que deje de pensar en ti y no te deje de amar.</p>
+        
+        <p>Tú eres el amor de mi vida, <strong>Alexia</strong>, eres mi todo, y te estoy entregando mi corazón, ya que tú vales mucho la pena.</p>
+        
+        <p>Eres mi niña hermosa, preciosa, mi princesa, mi mundo.</p>
+        
+        <p>Esta es mi primera vez haciendo una página así, así que si ves fallas es porque aún no le sé mucho, pero anduve practicando para hacerte este detalle. Espero y te guste mucho, mi niña hermosa.</p>
+        
+        <p style="text-align: center; font-weight: bold; margin-top: 30px;">Te amo hoy y siempre</p>
+
+        <button id="playSongButton">Reproducir Nuestra Canción</button>
+    </main>
+    
     <script>
-        const audio = document.getElementById('miCancion');
-        const boton = document.getElementById('btnReproducir');
-
-        boton.addEventListener('click', () => {
-            audio.play();
-            boton.style.display = 'none'; // Oculta el botón después de darle clic
+        document.getElementById('playSongButton').addEventListener('click', function() {
+            var audio = document.getElementById('miAudio');
+            if (audio.paused) {
+                audio.play();
+                this.textContent = 'Pausar Canción';
+            } else {
+                audio.pause();
+                this.textContent = 'Reproducir Nuestra Canción';
+            }
         });
     </script>
 
